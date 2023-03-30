@@ -3,7 +3,19 @@
 </div>
 
 <div class="gender">
-    <h2>Gêneros de filmes</h2>
-    <%= link_to 'Cadastrar', new_gender_path%>
-    <%= link_to 'Visualizar', genders_path %>
+<table>
+    <tr>
+        <td> <h2>Gêneros de filmes:  </h2> </td>
+        <td> <p> <%= link_to 'Cadastrar', new_gender_path%> - <%= link_to 'Visualizar', genders_path %></p> </td>
+    </tr>
+</table>    
+</div>
+
+<div class="directors">
+<table>
+    <tr>
+        <td> <h2>Diretores de filmes:  </h2> </td>
+        <td> <p> <%= link_to 'Cadastrar', new_director_path%> - <%= link_to 'Visualizar', directors_path %></p> </td>
+    </tr>
+</table>    
 </div>

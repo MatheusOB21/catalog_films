@@ -1,0 +1,12 @@
+<%= form_for director do |f| %>
+    <%= f.label :name, 'Nome do diretor:' %>
+    <%= f.text_field :name %>
+    <%= f.label :nascionalidade, 'Nascionalidade' %>
+    <%= f.text_field :nascionalidade %>
+    <%= f.label :birth, 'Data de nascimento' %>
+    <%= f.date_field :birth %>
+    <%= f.label :favorite_genere, 'Gênero favorito' %>
+    <%= f.select :favorite_genere, gender%>
+
+    <%= f.submit 'Salvar' %>
+<% end %> 
