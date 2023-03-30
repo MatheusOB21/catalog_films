@@ -1,0 +1,11 @@
+<h1>CADASTRAR NOVO GÊNERO DE FILME:</h1>
+<%= form_for @gender do |f| %>
+    <%= f.label :name, 'Nome do gênero:' %>
+    <%= f.text_field :name %>
+    <%= f.submit 'Criar gênero' %>
+
+<% end %> 
+
+<% if @gender.errors.any? %>
+  <%= flash[:alert] %>
+<% end %>
