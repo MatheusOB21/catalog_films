@@ -3,9 +3,8 @@
     <%= f.label :name, 'Nome do gênero:' %>
     <%= f.text_field :name %>
     <%= f.submit 'Criar gênero' %>
-
 <% end %> 
 
-<% if @gender.errors.any? %>
-  <%= flash[:alert] %>
+<% flash.each do |name, msg| %>
+  <%= msg %>
 <% end %>

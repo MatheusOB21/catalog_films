@@ -1,4 +1,7 @@
 class GendersController < ApplicationController
+    def index
+        @gender = Gender.all
+    end
     def new 
         @gender = Gender.new
     end
@@ -10,6 +13,7 @@ class GendersController < ApplicationController
         return redirect_to root_path if @gender.save
         
         flash[:alert] = "O gênero precisa de um nome!"
-        render "new"
+
+        render :new
     end
 end
