@@ -1,4 +1,7 @@
-<h1>Lista de Gêneros</h1>
+<h1>Lista de Gêneros - <%= link_to 'Voltar', root_path %></h1>
+
 <% @gender.each do |g| %>
-    <h2> <%= g.name %> - <%= link_to 'Editar', edit_gender_path(g) %> </h2> 
+    <h2> <%= g.name %> - <%= link_to 'Editar', edit_gender_path(g) %> - 
+    <%= link_to 'Deletar', gender_path(g),  data: { turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja apagar?"} %> 
+    </h2> 
 <% end %>
