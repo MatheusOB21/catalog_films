@@ -1,4 +1,4 @@
 <h1>Lista de Gêneros</h1>
 <% @gender.each do |g| %>
-    <h2> <%= g.name %> - <%= link_to 'Editar' %> </h2> 
+    <h2> <%= g.name %> - <%= link_to 'Editar', edit_gender_path(g) %> </h2> 
 <% end %>
