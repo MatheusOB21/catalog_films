@@ -40,6 +40,6 @@ class DirectorsController < ApplicationController
         @director = Director.find(params[:id])
         @director.delete
 
-        return redirect_to directors_path if  @director.delete
+        redirect_to directors_path if @director.delete
     end
 end

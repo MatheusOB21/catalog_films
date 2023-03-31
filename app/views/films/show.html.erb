@@ -1,0 +1,8 @@
+<h1>Filme detalhado - <%= link_to 'Voltar', films_path %></h1>
+<h2> <%= @film.title  %></h2> 
+    <p>Ano de lançamento: <%= @film.release_year %></p>
+    <p>Sinopse <%= @film.summary %></p>
+    <p>País de origem: <%= @film.country %></p>
+    <p>Duração: <%= @film.duration %></p>
+    <p>Diretor <%= @film.director %></p>
+    <p>Gênero <%= @film.gender %></p>
