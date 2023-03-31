@@ -22,11 +22,11 @@ class GendersController < ApplicationController
     def update
         @gender = Gender.find(params[:id])
         @gender.update(params.require(:gender).permit(:name))
-        return redirect_to genders_path if @gender.save
+        redirect_to genders_path 
     end
     def destroy
         @gender = Gender.find(params[:id])
         @gender.delete
-        return redirect_to root_path if @gender.delete
+        return redirect_to gender_path if @gender.delete
     end
 end

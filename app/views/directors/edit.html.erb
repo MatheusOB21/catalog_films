@@ -1,0 +1,7 @@
+<h1>EDITAR DIRETOR DE FILME:</h1>
+
+<%= render partial: 'form', locals: { director: @director, gender: @gender} %>
+
+<% flash.each do |name, msg| %>
+  <%= msg %>
+<% end %>
