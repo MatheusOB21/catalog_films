@@ -4,7 +4,7 @@
     <h2> <%= link_to f.title, film_path(f)%> - <%= link_to 'Editar', edit_film_path(f) %> - 
     <%= link_to 'Deletar', film_path(f),  data: { turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja apagar?"} %> 
     </h2> 
-    
+    <img src = "<%=f.image%>" alt = "<%=f.title%>" width = "200px" >
     <p>Ano de lançamento: <%= f.release_year %></p>
 
 <% end %>

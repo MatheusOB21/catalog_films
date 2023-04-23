@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_31_143521) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_17_200434) do
   create_table "directors", force: :cascade do |t|
     t.string "name"
     t.string "nascionalidade"
@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_143521) do
     t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "genders", force: :cascade do |t|

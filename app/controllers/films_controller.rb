@@ -17,8 +17,9 @@ class FilmsController < ApplicationController
         @film = Film.new 
     end
     def create
-        @film = Film.new(params.require(:film).permit(:title, :release_year, :summary, :country, :duration,  :director, :gender))
+        @film = Film.new(params.require(:film).permit(:title, :release_year, :summary, :country, :duration,  :director, :gender, :image))
         @film.save
+        redirect_to root_path
     end
     def edit
         @gender = []
@@ -33,7 +34,7 @@ class FilmsController < ApplicationController
     end
     def update
         @film = Film.find(params[:id])
-        @film.update(params.require(:film).permit(:title, :release_year, :summary, :country, :duration,  :director, :gender))
+        @film.update(params.require(:film).permit(:title, :release_year, :summary, :country, :duration,  :director, :gender, :image))
         redirect_to films_path
     end
     def destroy
