@@ -17,9 +17,23 @@ class FilmsController < ApplicationController
         @film = Film.new 
     end
     def create
-        @film = Film.new(params.require(:film).permit(:title, :release_year, :summary, :country, :duration,  :director, :gender, :image))
-        @film.save
-        redirect_to root_path
+      @gender = []
+      Gender.all.each do |g|
+          @gender << g.name
+      end
+      @director = []
+      Director.all.each do |d|
+          @director << d.name
+      end
+      
+      @film = Film.new(params.require(:film).permit(:title, :release_year, :summary, :country, :duration,  :director, :gender, :image))
+      
+      if @film.save() 
+        redirect_to root_path, notice: "Filme cadastrado com sucesso!"
+      else
+        flash.now[:notice] = "Filme não cadastrado!"
+        render 'new'  
+      end
     end
     def edit
         @gender = []

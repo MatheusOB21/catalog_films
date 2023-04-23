@@ -1,7 +1,3 @@
 <h1>CADASTRAR NOVO FILME:</h1>
 
 <%= render partial: 'form', locals: { film: @film, gender: @gender, director: @director } %>
-
-<% flash.each do |name, msg| %>
-  <%= msg %>
-<% end %>
